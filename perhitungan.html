@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Persamaan Kuadrat</title>
+   <link rel="stylesheet" href="css/style1.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="manifest" href="favicon/site.webmanifest">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+   <style>
+    
+.buttons{
+  font-family: basic-bold;
+  color: #0a7085;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 24pt;
+  border-radius: 20px;
+  border: 1px solid #DBDBDB;
+  background: radial-gradient(50% 50% at 50% 50%, #69D2E7 0%, rgba(183, 183, 183, 0.00) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.35);
+}
+
+
+.buttons:hover{
+  font-family: basic-bold;
+  color: #ed700a;
+  text-decoration: none;
+  font-size: 24pt;
+  border-radius: 20px;
+  border: 1px solid #DBDBDB;
+  background: radial-gradient(50% 50% at 50% 50%, #e7d869 0%, rgba(183, 183, 183, 0.00) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.35);
+}
+
+   </style>
+
+  </head>
+  <body class="flex-column">
+    <div id="container">
+      <div id="content" class="flex-column">
+        <img src="resources/logo.svg" style="height: 200px; width: 200px;" class="animated animatedFadeInUp fadeInUp">
+        <div id="equat-container" class="flex-row shadow animated animatedFadeInUp fadeInUp" class="a">
+          <div id="equations" class="lightfont">
+          <span style="color: #A9A9A9;">.</span><input id="a" class="lightfont" onclick="blankForm('a')" type="number" placeholder="a"></input>x²&nbsp + <input id="b" class="lightfont" onclick="blankForm('b')" type="number" placeholder="b"></input>x&nbsp + <input id="c" class="lightfont" onclick="blankForm('c')" type="number" placeholder="c"></input>&nbsp =&nbsp 0
+          </div>
+          <button id="hitung" class="mediumfont" onclick="hitungPersamaan()">
+          KALKULASI
+          </button>
+
+           
+        </div>
+
+        <div id="hasil">
+        </div>
+        <a class="buttons px-5 py-4 animated animatedFadeInUp fadeInUp" target="_blank" href="index.html">Kembali</a>
+      </div>
+    </div>
+
+    <!-- Born To Be Great -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"> </script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

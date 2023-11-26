@@ -1,0 +1,267 @@
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@font-face {
+  font-family: basic-bold;
+  src: url(/resources/BasicSans-Bold.otf)
+}
+
+@font-face {
+  font-family: basic-regular;
+  src: url(/resources/BasicSans-Regular.ttf)
+}
+
+.lightfont { font-family: basic-regular; }
+.mediumfont { font-family: basic-bold; }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#container {
+  display: flex;
+  margin: auto 0px;
+}
+#equat-container {
+  flex-direction: column; /*row*/
+  padding: 32px 21px; /*12px 21px*/
+  margin: 16px;
+  border-radius: 20px;
+  border: 1px solid #DBDBDB;
+  background: radial-gradient(50% 50% at 50% 50%, #c6c6c6 0%, rgba(183, 183, 183, 0.00) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.35);
+
+
+}
+#equations {
+  padding: 0px;
+  margin: 10px 21px 18px; /*0px 21px*/
+}
+#hitung {
+  padding: 22px 136px;  /*8px 15px*/
+  margin: 20px 32px 10px; /*0px 32px*/
+  font-size: 36px; /*25px*/
+  background-color: #f18731;
+  color: #FFFFFF;
+  border-style: solid;
+  border-width: 0px 0px 5px; /*0px 0px 3px*/
+  border-radius: 50px; /*5px*/
+  border-color: rgb(189, 86, 2);
+  transition: all 0.2s;
+  transition-timing-function: ease-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+#hitung:hover {
+  background-color: #ed700a;
+  border-color: #f18731;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#hitung:focus { outline: none; }
+#hasil {
+  margin: 16px;
+}
+.card {
+  zoom: 125%; /*100%*/
+  position: relative;
+  padding: 25px;
+  margin: 22px; /*16px*/
+  width: 380px; /*350px*/
+  height: 125px; /*85px*/
+  color: #555555;
+  font-size: 28px; /*20px*/
+  background-color: #F5F6F7;
+  border-radius: 5px;
+}
+body {
+  padding: 100px 0px;
+  background-image: url(/resources/bg-masthead.jpg);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(239,239,239,1) 36%, rgba(241,241,241,1) 40%);
+  color: #404040;
+  font-family: rubik-light;
+  font-size: 40px;
+}
+img {
+  zoom: 125%;
+  margin: 42px; /*16px*/
+}
+div {
+  border-style: solid;
+  border-width: 0px;
+  border-color: #FFFF00;
+}
+input {
+  padding: 0px;
+  margin: 0px;
+  width: 65px;
+  background-color: transparent;
+  color: #2a2a2a;
+  font-size: 40px;
+  text-align: right;  
+  border-style: solid;
+  border-width: 0px;
+}
+input:focus {
+  border-style: solid;
+  border-width: 0px 0px 2px;
+  border-color: #A9A9A9;
+  outline: none;
+} 
+.ok {
+  border-width: 0px;
+}
+.ok:focus {
+  border-width: 0px 0px 3px;
+  border-color: #A9A9A9;
+}
+.notok {
+  border-width: 0px 0px 3px;
+  border-color: #ea601a;
+}
+#dialogoverlay {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+  opacity: 0;
+}
+#dialogoverlay:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+#dialog {
+  position: absolute;
+  z-index: 2000;
+  top: calc(50% - 150px);
+  left: calc(50% - 250px);
+  padding: 25px;
+  width: 450px;
+  height: 225px;
+  color: #555555;
+  font-size: 28px;
+  background-color: #F5F6F7;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 5px;
+}
+a {
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#tentang {
+  font-size: 28px;
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration:3s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+
+
+
+
+
+@media screen and (min-width:1024px) {
+  #equat-container {
+    flex-direction: row;
+    padding: 16px 21px;
+  }
+  #equations {
+    margin: 0px 21px;
+  }
+  #hitung {
+    padding: 8px 15px;
+    margin: 0px 21px;
+    font-size: 25px;
+    border-width: 0px 0px 3px;
+    border-radius: 5px;
+  }
+  #hasil {
+    font-size: 32px;
+    margin: 0px;
+    font-family: basic-bold;
+  }
+  .card {
+    zoom: 100%;
+    padding: 15px;
+    margin: 16px;
+    width: 350px;
+    height: 85px;
+    font-size: 20px;
+  }
+  img {
+    zoom: 100%;
+  }
+  #dialog {
+    font-size: 18px;
+    height: 125px;
+  }
+  #tentang {
+    font-size: 18px;
+  }
+}
+@media screen and (min-resolution:180dpi) {
+  body {
+    zoom: 150%;
+  }
+}
